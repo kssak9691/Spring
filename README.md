@@ -1,9 +1,4 @@
-
-server.port=1691
-spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
-spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
-spring.datasource.username=hr
-spring.datasource.password=hr
-spring.jpa.show-sql=true
-spring.jpa.hibernate.ddl-auto=create
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.
+@SpringBootApplication(scanBasePackages= {"com.cg.payroll"})
+@EntityScan(basePackages="com.cg.payroll.beans")
+@EnableJpaRepositories(basePackages="com.cg.payroll.daoservices")
+@EnableWebMvc
